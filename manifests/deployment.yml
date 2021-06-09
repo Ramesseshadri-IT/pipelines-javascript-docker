@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ramesseshadriitpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ramesseshadriitpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: ramesseshadriitpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ramesseshadriitpipelinesjavascriptdocker 
+          image: rssitecoreacr.azurecr.io/ramesseshadriitpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
